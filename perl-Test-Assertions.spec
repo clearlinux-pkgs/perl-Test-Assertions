@@ -4,7 +4,7 @@
 #
 Name     : perl-Test-Assertions
 Version  : 1.054
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/B/BB/BBC/Test-Assertions-1.054.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BB/BBC/Test-Assertions-1.054.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libt/libtest-assertions-perl/libtest-assertions-perl_1.054-3.debian.tar.xz
