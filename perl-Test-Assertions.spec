@@ -11,6 +11,7 @@ Source1  : http://http.debian.net/debian/pool/main/libt/libtest-assertions-perl/
 Summary  : a simple set of building blocks for both unit and runtime testing
 Group    : Development/Tools
 License  : GPL-2.0
+Requires: perl-Test-Assertions-license = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Log::Trace)
 BuildRequires : perl(Test::More)
@@ -18,6 +19,24 @@ BuildRequires : perl(Test::More)
 %description
 Test::Assertions v1.054
 (c) BBC 2004, 2005. This program is free software; you can redistribute it and/or modify it under the GNU GPL.
+
+%package dev
+Summary: dev components for the perl-Test-Assertions package.
+Group: Development
+Provides: perl-Test-Assertions-devel = %{version}-%{release}
+Requires: perl-Test-Assertions = %{version}-%{release}
+
+%description dev
+dev components for the perl-Test-Assertions package.
+
+
+%package license
+Summary: license components for the perl-Test-Assertions package.
+Group: Default
+
+%description license
+license components for the perl-Test-Assertions package.
+
 
 %prep
 %setup -q -n Test-Assertions-1.054
@@ -63,3 +82,17 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.28.2/Test/Assertions.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Test/Assertions/Manual.pod
+/usr/lib/perl5/vendor_perl/5.28.2/Test/Assertions/TestScript.pm
+
+%files dev
+%defattr(-,root,root,-)
+/usr/share/man/man3/Test::Assertions.3
+/usr/share/man/man3/Test::Assertions::Manual.3
+/usr/share/man/man3/Test::Assertions::TestScript.3
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Test-Assertions/COPYING
+/usr/share/package-licenses/perl-Test-Assertions/deblicense_copyright
