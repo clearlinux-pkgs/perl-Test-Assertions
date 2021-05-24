@@ -4,7 +4,7 @@
 #
 Name     : perl-Test-Assertions
 Version  : 1.054
-Release  : 21
+Release  : 22
 URL      : https://cpan.metacpan.org/authors/id/B/BB/BBC/Test-Assertions-1.054.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BB/BBC/Test-Assertions-1.054.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libt/libtest-assertions-perl/libtest-assertions-perl_1.054-3.debian.tar.xz
@@ -107,6 +107,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.32.1/Test/Assertions.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Test/Assertions/Manual.pod
-/usr/lib/perl5/vendor_perl/5.32.1/Test/Assertions/TestScript.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Test/Assertions.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Test/Assertions/Manual.pod
+/usr/lib/perl5/vendor_perl/5.34.0/Test/Assertions/TestScript.pm
